@@ -1,0 +1,46 @@
+.btn,
+.btn-outline {
+  display: inline-block;
+  min-width: remy(237);
+  height: remy(68);
+  line-height: remy(68);
+  text-align: center;
+  border-radius: remy(34);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: remy(0.75);
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: $ac;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: darken($ac, 10%);
+}
+
+.btn:focus {
+  background-color: darken($ac, 10%);
+  outline: remy(9) solid $outBr;
+}
+
+.btn-outline {
+  border: remy(2) solid $ac;
+  background-color: white;
+  color: $ac;
+  line-height: remy(64);
+}
+
+.btn-outline:hover {
+  border: remy(2) solid $ac;
+  color: darken($ac, 10%);
+}
+
+.btn-outline:focus {
+  border: remy(2) solid $ac;
+  color: $ac;
+  outline: remy(9) solid $outBr;
+  background-color: white;
+}
