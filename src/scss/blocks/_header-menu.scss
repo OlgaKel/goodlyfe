@@ -1,0 +1,12 @@
+.header-menu {
+  column-gap: remy(70);
+  flex-shrink: 0;
+  a {
+    padding: remy(3);
+    color: white;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

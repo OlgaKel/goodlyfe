@@ -1,0 +1,45 @@
+.form-item {
+  position: relative;
+  input {
+    width: 100%;
+    display: block;
+    font-size: 1 rem;
+    height: remy(50);
+    border: remy(1) soild $sec3;
+    border-radius: remy(5);
+    color: $sec1;
+  }
+  input::placeholder {
+    font-size: 1rem;
+    color: $sec1;
+  }
+}
+.search-form {
+  width: 100%;
+  column-gap: remy(70);
+  .form-item {
+    width: 100%;
+  }
+  .search-btn,
+  .reset-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .search-btn {
+    left: 0;
+    transform: translateY(-50%);
+    .svg-search {
+      width: remy(35);
+      height: remy(35);
+      fill: var(--ac);
+    }
+  }
+  .reset-btn {
+    right: 0;
+  }
+  input {
+    padding-inline: remy(50);
+  }
+}

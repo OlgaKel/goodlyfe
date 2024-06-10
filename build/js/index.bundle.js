@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector("#search-open"),t=document.querySelector("#header-search-form");e.addEventListener("click",(()=>{t.classList.toggle("search-form--open")}))}));

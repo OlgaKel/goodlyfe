@@ -58,6 +58,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+body {
+  --ac: #e43071;
+  --subAc: #ffc1d8;
+  --outBr: #ffdae7;
+  --darkAc: #be285e;
+}
+
+body.green-theme {
+  --ac: #26d68a;
+  --subAc: #9be8c7;
+  --outBr: #a1e7c9;
+  --darkAc: #0b9056;
+}
 html {
   scroll-behavior: smoth;
 }
@@ -68,6 +81,8 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
 }
 
 a,
@@ -79,4 +94,38 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+button,
+a {
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+button,
+input,
+button:focus,
+input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
 }

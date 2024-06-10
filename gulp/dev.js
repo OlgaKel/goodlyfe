@@ -61,21 +61,21 @@ gulp.task('sass:dev', function(){
 //Copy images//
 gulp.task('images:dev', function(){
   return gulp.src('src/img/**/*')
-  // .pipe(changed('./build/img/'))
+  .pipe(changed('./build/img/'))
   // .pipe(imagemin({ verbose: true}))
   .pipe(gulp.dest('build/img'))
 })
 
 gulp.task('fonts:dev', function(){
   return gulp.src('src/fonts/**/*')
-  // .pipe(changed('./build/fonts/'))
+  .pipe(changed('./build/fonts/'))
   .pipe(gulp.dest('build/fonts'))
 })
 
 
 gulp.task('js:dev', function(){
   return gulp.src('./src/js/*.js')
-  // .pipe(changed('./build/js/'))
+  .pipe(changed('./build/js/'))
   .pipe(plumber(plumberNotify('js')))
   // .pipe(babel())
   .pipe(webpack(require('./../webpack.config.js')))

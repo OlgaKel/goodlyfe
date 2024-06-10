@@ -1,9 +1,13 @@
 @import "base/_var";
 @import "base/_base";
 @import "base/_typography";
+@import "base/_form";
+@import "base/_icons";
+
 //blocks
 @import "blocks/_buttons";
+@import "blocks/_header-menu";
+@import "blocks/_header-search-wrapper";
 
 //sections
-
 @import "sections/_header";

@@ -1,0 +1,27 @@
+.logo {
+  font-size: remy(40);
+  line-height: 1.095;
+  color: white;
+  font-weight: 800;
+  margin-right: auto;
+  span {
+    color: var(--subAc);
+  }
+}
+
+.header-container {
+  width: 100%;
+  max-width: remy(1390);
+  padding-inline: remy(15);
+  margin: 0 auto;
+}
+.header-nav {
+  height: remy(101);
+  background-color: var(--ac);
+  z-index: 3;
+  position: relative;
+  &__btn {
+    column-gap: remy(40);
+    margin-left: remy(73);
+  }
+}

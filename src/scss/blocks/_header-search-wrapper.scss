@@ -1,0 +1,16 @@
+.header-search-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-block: remy(30);
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &.search-form--open {
+    top: remy(101);
+    z-index: 2;
+  }
+}
