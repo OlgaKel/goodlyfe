@@ -3,12 +3,9 @@
   height: remy(20);
   fill: white;
   transform: rotate(90deg);
-  &:hover {
-    fill: green;
-  }
 }
 .svg-xmark {
-  width: remy(40);
-  height: remy(40);
+  width: remy(25);
+  height: remy(25);
   fill: $sec2;
 }

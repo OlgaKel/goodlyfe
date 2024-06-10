@@ -57,10 +57,16 @@
   height: remy(50);
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: remy(6);
   color: white;
   transition: 0.3s;
   &:hover {
     opacity: 0.7;
+  }
+  @media (max-width: remy(574)) {
+    span {
+      display: none;
+    }
   }
 }

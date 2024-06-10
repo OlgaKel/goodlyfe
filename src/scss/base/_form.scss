@@ -28,18 +28,18 @@
     z-index: 2;
   }
   .search-btn {
-    left: 0;
+    left: remy(8);
     transform: translateY(-50%);
     .svg-search {
-      width: remy(35);
-      height: remy(35);
+      width: remy(25);
+      height: remy(25);
       fill: var(--ac);
     }
   }
   .reset-btn {
-    right: 0;
+    right: remy(8);
   }
   input {
-    padding-inline: remy(50);
+    padding-inline: remy(40);
   }
 }
