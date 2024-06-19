@@ -1,0 +1,33 @@
+.result {
+  padding-block: remy(94) remy(122);
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    column-gap: remy(30);
+  }
+  &__img {
+    flex-shrink: 0;
+  }
+  &__descrip {
+    flex-grow: 1;
+    max-width: remy(540);
+  }
+  .h4 {
+    margin-bottom: remy(6);
+  }
+  &__descrip-text {
+    font-size: 1rem;
+    line-height: remy(37);
+    margin-bottom: remy(24);
+  }
+  @media (max-width: remy(767)) {
+    .h4 {
+      margin-bottom: remy(11);
+    }
+    &__descrip-text {
+      line-height: remy(32);
+      margin-bottom: remy(48);
+      margin-right: remy(20);
+    }
+  }
+}
