@@ -126,6 +126,9 @@ input:focus {
   background: none;
   padding: 0;
 }
+.accent-span {
+  color: var(--subAc) !important;
+}
 .d-flex {
   display: flex;
   align-items: center;

@@ -8,7 +8,9 @@
     "gulp-babel": "^8.0.0",
     "gulp-changed": "^4.0.3",
     "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
+    "gulp-filter": "^9.0.1",
     "gulp-fonter-fix": "^0.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlclean": "^2.7.22",
@@ -37,5 +39,9 @@
   },
   "browserslist": [
     "last 5 versions"
-  ]
+  ],
+  "dependencies": {
+    "gulplog": "^1.0.0",
+    "swiper": "^11.1.4"
+  }
 }

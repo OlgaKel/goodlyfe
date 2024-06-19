@@ -4,7 +4,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const sassGlob = require('gulp-sass-glob');
-const csso = require('gulp-csso');
+// const csso = require('gulp-csso');
 const webpCss = require('gulp-webp-css');
 
 const htmlclean = require('gulp-htmlclean');
@@ -68,7 +68,7 @@ gulp.task('sass:docs', function(){
     .pipe(webpCss())
     .pipe(groupMedia())
     .pipe(sass())
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(sourceMaps.write())
     .pipe(gulp.dest('./docs/css/'))
 })
@@ -77,7 +77,7 @@ gulp.task('sass:docs', function(){
 gulp.task('images:docs', function () {
 	return (
 		gulp
-			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+			.src(['./src/img/**/*', '!./src/img/svgicons/**/*','!./src/img/sprite/**/*','!./src/img/favicons/**/*'],{ encoding: false })
 			.pipe(changed('./docs/img/'))
 			.pipe(
 				imagemin([
@@ -108,6 +108,12 @@ gulp.task('fonts:docs', function(){
   return gulp.src('src/fonts/**/*')
   .pipe(changed('./docs/fonts/'))
   .pipe(gulp.dest('./docs/fonts'))
+})
+
+gulp.task('libs:docs', function(){
+  return gulp.src('src/libs/**/*')
+  .pipe(changed('./docs/libs/'))
+  .pipe(gulp.dest('docs/libs'))
 })
 
 gulp.task('js:docs', function(){

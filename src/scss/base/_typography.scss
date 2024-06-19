@@ -3,7 +3,7 @@
 .h4 {
   font-size: remy(70);
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
 }
 .h2 {
   font-size: remy(60);
@@ -19,4 +19,14 @@
 }
 .h5 {
   font-size: remy(38);
+}
+@media (max-width: remy(1199)) {
+  .h1 {
+    font-size: remy(54);
+  }
+}
+@media (max-width: remy(767)) {
+  .h1 {
+    font-size: remy(32);
+  }
 }

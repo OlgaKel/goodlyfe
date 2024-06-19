@@ -13,7 +13,8 @@ const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const sassGlob = require('gulp-sass-glob');
-
+const imageminWebp = require('imagemin-webp');
+const rename = require('gulp-rename');
 
 
 
@@ -59,12 +60,34 @@ gulp.task('sass:dev', function(){
 })
 
 //Copy images//
-gulp.task('images:dev', function(){
-  return gulp.src('src/img/**/*')
-  .pipe(changed('./build/img/'))
-  // .pipe(imagemin({ verbose: true}))
-  .pipe(gulp.dest('build/img'))
-})
+gulp.task('images:dev', function () {
+	return (
+		gulp
+			.src(['./src/img/**/*', '!./src/img/svgicons/**/*','!./src/img/sprite/**/*','!./src/img/favicons/**/*'],{ encoding: false })
+			.pipe(changed('./build/img/'))
+			.pipe(
+				imagemin([
+					imageminWebp({
+						quality: 85,
+					}),
+				])
+			)
+			.pipe(rename({ extname: '.webp' }))
+			.pipe(gulp.dest('./build/img/'))
+			.pipe(gulp.src('./src/img/**/*'))
+			.pipe(changed('./build/img/'))
+			.pipe(
+				imagemin(
+					[
+						imagemin.gifsicle({ interlaced: true }),
+						imagemin.mozjpeg({ quality: 85, progressive: true }),
+					],
+					{ verbose: true }
+				)
+			)
+			.pipe(gulp.dest('./build/img/'))
+	);
+});
 
 gulp.task('fonts:dev', function(){
   return gulp.src('src/fonts/**/*')
@@ -72,7 +95,11 @@ gulp.task('fonts:dev', function(){
   .pipe(gulp.dest('build/fonts'))
 })
 
-
+gulp.task('libs:dev', function(){
+  return gulp.src('src/libs/**/*')
+  .pipe(changed('./build/libs/'))
+  .pipe(gulp.dest('build/libs'))
+})
 gulp.task('js:dev', function(){
   return gulp.src('./src/js/*.js')
   .pipe(changed('./build/js/'))
@@ -95,5 +122,6 @@ gulp.task('watch:dev', function(){
    gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));
    gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
    gulp.watch('./src/js/**/*.js', gulp.parallel('js:dev'));
+   gulp.watch('./src/libs/**/*', gulp.parallel('libs:dev'));
 })
 

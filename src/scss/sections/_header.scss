@@ -4,9 +4,7 @@
   color: white;
   font-weight: 800;
   margin-right: auto;
-  span {
-    color: var(--subAc);
-  }
+
   @media (max-width: remy(1199)) {
     font-size: remy(32);
   }
@@ -18,13 +16,13 @@
 .header-container {
   width: 100%;
   max-width: remy(1390);
-  padding-inline: remy(15);
+  padding-inline: remy(16);
   margin: 0 auto;
 }
 .header-nav {
   height: remy(101);
   background-color: var(--ac);
-  z-index: 3;
+  z-index: 5;
   position: relative;
   &__btn {
     column-gap: remy(40);

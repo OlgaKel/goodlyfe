@@ -4,10 +4,10 @@
 @import "base/_form";
 @import "base/_icons";
 
-//blocks
 @import "blocks/_buttons";
 @import "blocks/_header-menu";
 @import "blocks/_header-search-wrapper";
 @import "blocks/_burger";
-//sections
+
 @import "sections/_header";
+@import "sections/_header-slider.scss";

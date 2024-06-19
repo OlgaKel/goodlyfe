@@ -26,4 +26,15 @@ if(menuToggle){
   });
 }
 
+/* Header slider*/
+var headerSwiper = new Swiper(".header-slider", {
+  loop:true,
+  speed:1000,
+  effect: "fade",
+  lazy:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+});
 })

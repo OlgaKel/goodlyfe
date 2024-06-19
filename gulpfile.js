@@ -10,13 +10,13 @@ require('./gulp/fontsDocs.js');
 gulp.task('default', 
 gulp.series(
   'clean:dev','fontsDev',
-  gulp.parallel('sass:dev','images:dev', 'pug:dev','fonts:dev','js:dev' ),
+  gulp.parallel('sass:dev','images:dev', 'pug:dev','fonts:dev','js:dev','libs:dev' ),
   gulp.parallel('server:dev','watch:dev'),
 ))
 
 gulp.task('docs', 
 gulp.series(
   'clean:docs','fontsDocs',
-  gulp.parallel('sass:docs','images:docs', 'pug:docs','fonts:docs','js:docs' ),
+  gulp.parallel('sass:docs','images:docs', 'pug:docs','fonts:docs','libs:docs','js:docs' ),
   gulp.parallel('server:docs'),
 ))

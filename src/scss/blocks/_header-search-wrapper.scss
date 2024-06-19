@@ -3,6 +3,7 @@
   top: remy(-20);
   left: 0;
   right: 0;
+  z-index: 4;
   padding-block: remy(30);
   background-color: white;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
@@ -11,6 +12,10 @@
   &.search-form--open {
     top: remy(101);
     z-index: 2;
+  }
+
+  @media (max-width: remy(999)) {
+    top: remy(-48);
   }
   @media (max-width: remy(767)) {
     padding-block: remy(16);

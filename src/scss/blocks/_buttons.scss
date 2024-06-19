@@ -16,6 +16,10 @@
   white-space: nowrap;
   background-color: var(--ac);
   transition: 0.3s;
+  @media (max-width: remy(991)) {
+    height: remy(56);
+    line-height: remy(56);
+  }
 }
 
 .btn:hover {
@@ -32,6 +36,10 @@
   background-color: white;
   color: var(--ac);
   line-height: remy(64);
+  @media (max-width: remy(991)) {
+    height: remy(60);
+    line-height: remy(56);
+  }
 }
 .btn-outline--slim {
   height: remy(50);
