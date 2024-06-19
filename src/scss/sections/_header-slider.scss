@@ -33,7 +33,10 @@
   @media (max-width: remy(767)) {
     top: 43%;
     .btn {
-      min-width: remy(220);
+      min-width: remy(208);
+    }
+    .h1 {
+      margin-bottom: remy(15);
     }
   }
 }

@@ -121,14 +121,13 @@ button,
 input,
 button:focus,
 input:focus {
+  font-family: inherit;
   border: none;
   outline: none;
   background: none;
   padding: 0;
 }
-.accent-span {
-  color: var(--subAc) !important;
-}
+
 .d-flex {
   display: flex;
   align-items: center;

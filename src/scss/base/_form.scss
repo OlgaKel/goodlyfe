@@ -22,13 +22,18 @@
   }
   .search-btn,
   .reset-btn {
+    width: remy(35);
+    height: remy(35);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
+    & > * {
+      vertical-align: middle;
+    }
   }
   .search-btn {
-    left: remy(8);
+    left: remy(4);
     transform: translateY(-50%);
     .svg-search {
       width: remy(25);
@@ -37,7 +42,7 @@
     }
   }
   .reset-btn {
-    right: remy(8);
+    right: remy(4);
   }
   input {
     padding-inline: remy(40);
