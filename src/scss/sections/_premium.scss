@@ -1,0 +1,35 @@
+.premium {
+  padding-block: remy(224) remy(129);
+  &-content {
+    display: flex;
+    align-items: center;
+    column-gap: remy(145);
+  }
+  &__descrip {
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: remy(489);
+    padding-top: remy(62);
+    .h4 {
+      margin-bottom: remy(4);
+    }
+    &-text {
+      font-size: 1rem;
+      line-height: remy(37);
+      margin-bottom: remy(20);
+    }
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  &__img-top {
+    position: relative;
+    z-index: 2;
+  }
+  &__img-bottom {
+    padding-left: remy(140);
+    margin-top: remy(-140);
+  }
+}
