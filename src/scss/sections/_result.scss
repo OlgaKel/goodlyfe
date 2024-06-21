@@ -38,6 +38,7 @@
     margin-bottom: remy(24);
   }
   @media (max-width: remy(991)) {
+    padding-block: remy(50) remy(60);
     &__img-top img {
       width: remy(280);
     }
@@ -45,7 +46,9 @@
       width: remy(200);
     }
   }
+
   @media (max-width: remy(767)) {
+    padding-block: remy(35) remy(23);
     &-content {
       flex-direction: column;
       align-items: flex-start;
