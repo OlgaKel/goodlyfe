@@ -127,7 +127,9 @@ input:focus {
   background: none;
   padding: 0;
 }
-
+*.section-pb {
+  padding-block: remy(64) remy(71);
+}
 .d-flex {
   display: flex;
   align-items: center;
