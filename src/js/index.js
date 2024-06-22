@@ -37,4 +37,17 @@ var headerSwiper = new Swiper(".header-slider", {
     clickable:true,
   },
 });
+
+var ctaSwiper = new Swiper(".cta-slider", {
+  loop:true,
+  speed:1000,
+  effect: "fade",
+  lazy:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+});
 })
+
+

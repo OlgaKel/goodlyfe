@@ -69,6 +69,10 @@
     .h4 {
       margin-bottom: remy(11);
     }
+    &__descrip {
+      padding-bottom: 0;
+    }
+
     &__descrip-text {
       line-height: remy(32);
       margin-bottom: remy(48);

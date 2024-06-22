@@ -1,0 +1,26 @@
+.cta {
+  text-align: center;
+  .slider-content__title {
+    padding-bottom: remy(23);
+    @media (max-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
+  .h2 {
+    text-shadow: 0 0 60px rgba(0, 0, 0, 0.46);
+    margin-bottom: remy(24);
+    @media (max-width: remy(767)) {
+      margin-bottom: remy(8);
+    }
+  }
+  .subtitle {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: remy(418);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: remy(16);
+  }
+  .swiper-pagination {
+    bottom: remy(26);
+  }
+}

@@ -21,22 +21,42 @@
 .h5 {
   font-size: remy(38);
 }
+.accent-span {
+  color: var(--subAc) !important;
+}
+.txt-accent {
+  color: var(--ac) !important;
+}
+.subtitle {
+  font-size: remy(17);
+  line-height: 1.35;
+  font-family: "OpenSans";
+  font-weight: 600;
+}
 @media (max-width: remy(1199)) {
   .h1 {
     font-size: remy(54);
+  }
+  .h2 {
+    font-size: remy(52);
+  }
+}
+@media (max-width: remy(991)) {
+  .h2 {
+    font-size: remy(48);
   }
 }
 @media (max-width: remy(767)) {
   .h1 {
     font-size: remy(32);
   }
+  .h2 {
+    font-size: remy(42);
+  }
   h4 {
     line-height: 1.2;
   }
-}
-.accent-span {
-  color: var(--subAc) !important;
-}
-.txt-accent {
-  color: var(--ac) !important;
+  .subtitle {
+    font-size: remy(16);
+  }
 }
