@@ -1,0 +1,203 @@
+.stories {
+  padding-top: remy(130);
+  padding-bottom: remy(80);
+  background: linear-gradient(to top, #f4e3e9 0%, rgba(255, 255, 255, 1) 100%);
+  &-content {
+    width: 100%;
+    max-width: remy(955);
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: remy(991)) {
+      padding-left: remy(16);
+      padding-right: remy(16);
+    }
+    @media (max-width: remy(767)) {
+      padding-left: remy(28);
+      padding-right: remy(28);
+    }
+  }
+  &__title {
+    margin-bottom: remy(30);
+    .h3 {
+      line-height: 1.19;
+      margin-bottom: remy(12);
+    }
+    p {
+      font-size: remy(18);
+    }
+    @media (max-width: remy(767)) {
+      padding-left: remy(3);
+      .h3 {
+        margin-bottom: remy(6);
+      }
+      p {
+        font-size: remy(9);
+      }
+    }
+  }
+  @media (max-width: remy(991)) {
+    overflow: hidden;
+    padding-top: remy(60);
+    padding-bottom: remy(48);
+  }
+}
+.stories__cards-wrapper {
+  padding-left: remy(97);
+  display: flex;
+  align-items: flex-start;
+  column-gap: remy(33);
+  position: relative;
+  padding-bottom: remy(68);
+  @media (max-width: remy(991)) {
+    align-items: stretch;
+    column-gap: 27px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+.stories__card {
+  width: remy(349);
+  flex-shrink: 0;
+  box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.18);
+  background: #fff;
+  border-radius: remy(10);
+  padding: remy(35) remy(32) remy(38) remy(27);
+
+  .h5 {
+    color: var(--ac);
+    margin-bottom: remy(29);
+  }
+  &__text {
+    padding-left: remy(37);
+    font-size: remy(18);
+    line-height: 1.78;
+    margin-bottom: remy(16);
+    position: relative;
+    span {
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-family: "Times New Roman";
+      font-size: remy(42);
+      line-height: 1;
+      color: var(--decoreColor);
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    column-gap: remy(17);
+    padding-left: remy(39);
+  }
+  &__img {
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  &__name {
+    p {
+      font-weight: 600;
+      font-size: remy(18);
+    }
+    span {
+      display: block;
+      color: #969bab;
+      font-size: remy(14);
+    }
+  }
+}
+.stories__card:nth-child(2) {
+  width: remy(449);
+
+  padding-top: remy(46);
+  padding-left: remy(34);
+  margin-top: remy(-141);
+  .h5 {
+    margin-bottom: remy(20);
+  }
+  .stories__card__text {
+    padding-left: remy(32);
+    margin-bottom: remy(10);
+  }
+  @media (max-width: remy(991)) {
+    margin-top: 0;
+  }
+}
+.stories__card:nth-child(3) {
+  width: remy(351);
+  position: absolute;
+  right: remy(123);
+  padding: remy(31);
+  bottom: 0;
+  padding-left: remy(35);
+  .h5 {
+    margin-bottom: remy(35);
+  }
+  .stories__card__text {
+    padding-left: remy(30);
+  }
+  .stories__card__footer {
+    padding-left: remy(30);
+  }
+  @media (max-width: remy(991)) {
+    right: auto;
+    position: relative;
+    bottom: auto;
+  }
+  @media (max-width: remy(767)) {
+    margin-right: remy(20);
+  }
+}
+
+@media (max-width: remy(991)) {
+  .stories__card,
+  .stories__card:nth-child(2),
+  .stories__card:nth-child(3) {
+    width: remy(243);
+    padding: remy(24) remy(22) remy(26) remy(19);
+    display: flex;
+    flex-direction: column;
+    .h5 {
+      font-size: remy(26);
+      margin-bottom: remy(20);
+      width: 100%;
+    }
+    .stories__card__text {
+      width: 100%;
+      flex-grow: 1;
+      padding-left: remy(25);
+      font-size: remy(12);
+      margin-bottom: remy(12);
+      span {
+        font-size: remy(26);
+        top: -3px;
+      }
+    }
+    .stories__card__footer {
+      width: 100%;
+      column-gap: remy(13);
+      padding-left: remy(25);
+    }
+
+    .stories__card__img {
+      width: remy(41);
+      height: remy(40);
+    }
+    .stories__card__name {
+      p {
+        font-size: remy(12);
+      }
+      span {
+        font-size: remy(9);
+      }
+    }
+  }
+  .stories__cards-wrapper {
+    width: calc(50% + 50vw);
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

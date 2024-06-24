@@ -1,0 +1,32 @@
+mixin stories-card(title, text, img, name) 
+  //======single card=======
+  .stories__card
+    h3.h5 #{title}Kg lost!
+    .stories__card__text 
+      span  &#10075;&#10075;
+      p #{text}
+    .stories__card__footer 
+      .stories__card__img 
+        img(src="./img/avatar"+img+".webp", width="59" height="57" alt = "ava")
+      .stories__card__name
+        p #{name}
+        span Mother of two
+
+//=====stories=======
+stories.stories 
+  .stories-content
+    .stories__title
+      h2.h3 Real Stories from#[br]Real Customers
+      p Be inspired with these experiences.
+
+    //======= cards======  
+  
+    .stories__cards-wrapper
+      +stories-card('3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.', '2', 'James John') 
+
+      +stories-card('17', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in mo.', '1', 'Mary Patricia') 
+        
+      +stories-card('43', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '3', 'Robert Micheal') 
+   
+   
+              
