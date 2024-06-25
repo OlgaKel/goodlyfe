@@ -1,0 +1,112 @@
+.app {
+  margin-top: remy(81);
+  padding-top: remy(112);
+  padding-bottom: remy(55);
+  background-color: var(--ac);
+  color: white;
+  position: relative;
+  z-index: 2;
+  &-container {
+    width: 100%;
+    max-width: remy(955);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    column-gap: remy(70);
+    @media (max-width: remy(1199)) {
+      column-gap: remy(40);
+    }
+    @media (max-width: remy(991)) {
+      padding-left: remy(16);
+      padding-right: remy(16);
+      flex-direction: column;
+    }
+    @media (max-width: remy(767)) {
+      padding-left: remy(28);
+      padding-right: remy(28);
+    }
+  }
+  &-content {
+    max-width: remy(489);
+    line-height: 2.31;
+    flex-shrink: 0;
+    .h4 {
+      margin-bottom: remy(4);
+    }
+  }
+  &-content__text {
+    margin-bottom: 1rem;
+  }
+  &-links__group {
+    display: flex;
+    align-items: center;
+    column-gap: remy(12);
+    a {
+      flex-shrink: 0;
+    }
+    img {
+      width: remy(136);
+      height: remy(40);
+    }
+  }
+  @media (max-width: remy(767)) {
+    padding-top: remy(51);
+    padding-bottom: remy(124);
+    overflow: hidden;
+    &-content {
+      line-height: 2.06;
+      .h4 {
+        margin-bottom: remy(10);
+      }
+    }
+    &-content__text {
+      margin-bottom: remy(30);
+    }
+  }
+}
+
+.app:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: remy(20);
+  background-color: #ededed;
+  display: none;
+  @media (max-width: remy(767)) {
+    display: block;
+  }
+}
+.app-images {
+  display: flex;
+  column-gap: remy(32);
+  margin-top: remy(-137);
+  &__item {
+    width: remy(232);
+    flex-shrink: 0;
+  }
+  &__item:last-child {
+    position: relative;
+    top: remy(137);
+  }
+  @media (max-width: remy(1199)) {
+    column-gap: remy(23);
+    &__item {
+      width: remy(180);
+    }
+  }
+  @media (max-width: remy(991)) {
+    margin-top: remy(40);
+    position: relative;
+    z-index: 3;
+    &__item:last-child {
+      top: remy(123);
+    }
+  }
+  @media (max-width: remy(767)) {
+    &__item {
+      width: remy(166);
+    }
+  }
+}
