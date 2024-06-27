@@ -1,5 +1,53 @@
 .social {
+  padding-top: remy(61);
+  padding-bottom: remy(71);
   background-color: #ededed;
-  height: 500px;
   position: relative;
+  text-align: center;
+  .h4 {
+    margin-bottom: remy(18);
+  }
+  @media (max-width: remy(991)) {
+    padding-top: remy(44);
+    padding-bottom: remy(66);
+  }
+}
+.social-content {
+  column-gap: remy(93);
+  justify-content: center;
+  @media (max-width: remy(991)) {
+    column-gap: remy(27);
+  }
+}
+.social-item {
+  width: remy(110);
+  aspect-ratio: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  svg {
+    width: remy(30);
+    height: remy(30);
+    color: var(--ac);
+    fill: var(--ac);
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: var(--ac);
+    svg {
+      color: #fff;
+      fill: #fff;
+    }
+  }
+  @media (max-width: remy(991)) {
+    width: remy(75);
+  }
+}
+.svg-facebook {
+  width: remy(15);
+}
+.svg-youtube {
+  width: remy(25);
 }
