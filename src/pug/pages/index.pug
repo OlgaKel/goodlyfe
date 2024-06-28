@@ -1,10 +1,23 @@
 doctype html
-html.greem-theme
+html.green-theme
   head 
     link(rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css")
     link(rel="stylesheet" href="css/main.css")
-body    
+body
+    //==== toggle theme color=====    
+    label.toggle-theme
+      input.toggle-theme__input(type="checkbox") 
+      span.toggle-theme__dot
+
+    //===== button back top =====
+    a.back-top(href='#header')
+      svg 
+        use(href='./img/sprite/solid.svg#angle-up')
+
+
+    //==== header =======
     include ../sections/_header.pug
+    //==== main =========
     main.main
       include ../sections/_result.pug 
       include ../sections/_cta.pug
@@ -12,7 +25,7 @@ body
       include ../sections/_stories.pug
       include ../sections/_app.pug
       include ../sections/_social.pug
-
+    //==== footer ========
     include ../sections/_footer.pug  
      
     

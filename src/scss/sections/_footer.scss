@@ -1,0 +1,134 @@
+.footer {
+  padding-block: remy(92) remy(24);
+  background-color: $footerBg;
+  color: $footerText;
+  font-size: remy(14);
+  line-height: 1.71;
+  // font-family: "Manrope";
+  &-row {
+    display: flex;
+    column-gap: remy(40);
+    @media (max-width: remy(991)) {
+      column-gap: remy(20);
+    }
+    @media (max-width: remy(767)) {
+      flex-direction: column;
+      row-gap: remy(40);
+    }
+  }
+  &-row--justify {
+    margin-top: remy(105);
+    justify-content: space-between;
+    @media (max-width: remy(991)) {
+      margin-top: remy(75);
+    }
+    @media (max-width: remy(767)) {
+      flex-direction: column-reverse;
+      row-gap: remy(16);
+      margin-top: remy(25);
+    }
+  }
+  &-col {
+    width: remy(255);
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    column-gap: remy(16);
+    a {
+      width: remy(24);
+      height: remy(24);
+      flex-shrink: 0;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      &:hover {
+        background-color: var(--ac);
+      }
+    }
+    svg {
+      fill: white;
+    }
+  }
+
+  &-menu {
+    width: remy(255);
+  }
+  &-menu__list {
+    li + li {
+      margin-top: remy(12);
+    }
+  }
+  .contacts-list a,
+  &-menu__list a {
+    transition: 0.3s;
+    &:hover {
+      color: var(--subAc);
+    }
+  }
+  &-meta-menu {
+    a {
+      padding-inline: remy(8);
+      line-height: 1;
+      transition: 0.3s;
+      &:hover {
+        color: white;
+      }
+    }
+    a:first-child {
+      padding-left: 0;
+    }
+    a:last-child {
+      padding-right: 0;
+    }
+
+    a + a {
+      border-left: 1px solid $footerText;
+    }
+    @media (max-width: remy(767)) {
+      a {
+        margin-top: remy(10);
+      }
+      a + a {
+        border-left: 0;
+      }
+      a:nth-child(even) {
+        border-left: 1px solid $footerText;
+      }
+    }
+  }
+  @media (max-width: remy(767)) {
+    .container {
+      width: remy(255);
+      padding: 0;
+    }
+  }
+}
+.contacts-list {
+  li + li {
+    margin-top: remy(26);
+  }
+  a {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    fill: var(--ac);
+    vertical-align: middle;
+    margin-right: remy(10);
+  }
+}
+.logo.logo--footer {
+  font-size: remy(25);
+  .accent-span {
+    color: var(--ac);
+  }
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}

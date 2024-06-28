@@ -1,0 +1,63 @@
+mixin social-item(svgName, svgWidth="13", svgHeight="13", itemLink="#!")
+  a(href=''+ itemLink )
+    svg(width="" + svgWidth  height="" + svgHeight) 
+      use(href='/img/sprite/brands.svg#'+ svgName)
+
+mixin footer-menu(menuTitle, ...menuLinks)
+ .footer-menu
+        h4.block-title #{menuTitle}
+        ul.footer-menu__list
+          each item in menuLinks
+            li
+              a(href="#!") #{item}
+          
+footer.footer 
+  .container 
+    .footer-row 
+      .footer-col 
+        a(href='#!').logo.logo--footer.mb-24 Good#[span.accent-span lyfe]
+        .footer-text.mb-24  
+           p Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.
+
+        .footer-social 
+          +social-item('instagram')
+          +social-item('dribbble')
+          +social-item('twitter')
+          +social-item('youtube', '13' , '10')
+
+
+      +footer-menu('Quick Links','Classes','Timetable','Clubs','Nutrition','Free Trial')
+      +footer-menu('Guides','Weight Loss','Strength Gain','Crossfit','Washbaord Abs','Dieting')
+    
+  
+      .footer-contacts 
+        h4.block-title
+          ul.contacts-list 
+            li 
+              a(href="mailto:admin@goodlyfe.co")
+                svg(width='20' height='20') 
+                  use(href='./img/sprite/solid.svg#envelope')
+                span admin@goodlyfe.co
+
+            li 
+              a(href="tel:+88 98765 43210")
+                svg(width='20' height='20') 
+                  use(href='./img/sprite/solid.svg#phone-volume')
+                span +88 98765 43210        
+
+            li 
+              a(href="https://yandex.ru/maps/?um=constructor%3Ac73d1e746977f3622f4a7bd40e0461eecdfa6fb9af68493b1dbed936ebae7707&source=constructorLink" target='_blank' rel='noreferrer')
+                svg(width='20' height='20') 
+                  use(href='./img/sprite/solid.svg#location-dot')
+                span 90210 Beverly Hills California USA     
+
+    .footer-row.footer-row--justify  
+      .footer-text
+        p &copy; 2020 GoodLyfe. All rights reserved   
+
+      .footer-meta-menu 
+        nav 
+          a(href="#!") Terms & Conditions   
+          a(href="#!") Privacy Policy
+          a(href="#!") Sitemap
+          a(href="#!") Disclaimer       

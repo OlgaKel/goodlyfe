@@ -88,6 +88,9 @@
   &__item {
     width: remy(232);
     flex-shrink: 0;
+    img {
+      filter: drop-shadow(10px 15px 30px rgba(41, 41, 41, 0.5));
+    }
   }
   &__item:last-child {
     position: relative;

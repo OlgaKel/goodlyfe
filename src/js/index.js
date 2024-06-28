@@ -48,6 +48,36 @@ var ctaSwiper = new Swiper(".cta-slider", {
     clickable:true,
   },
 });
+/*Toggle theme color */
+ const toggleTheme = document.querySelector('.toggle-theme');
+ if(toggleTheme){
+  const toggleThemeInput = toggleTheme.querySelector('.toggle-theme__input');
+
+  toggleTheme.addEventListener('click', ()=>{
+
+    if(toggleThemeInput.checked){
+      bodyEl.classList.add('green-theme');
+    }else{
+      bodyEl.classList.remove('green-theme');
+    }
+  });
+ }
+
+ /* back top button */
+  const backTop = document.querySelector('.back-top');
+  if(backTop){
+     window.addEventListener('scroll',()=>{
+
+      if(window.scrollY > 500){
+
+      backTop.classList.add('back-top--visible');  
+
+    }else{
+
+      backTop.classList.remove('back-top--visible');
+    }
+     })  
+  }
 })
 
 

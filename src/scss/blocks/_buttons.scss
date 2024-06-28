@@ -81,3 +81,31 @@
     }
   }
 }
+.back-top {
+  position: fixed;
+  bottom: remy(80);
+  right: remy(40);
+  z-index: -10;
+  width: remy(40);
+  height: remy(40);
+  border-radius: 50%;
+  background-color: var(--ac);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+  svg {
+    width: remy(24);
+    height: remy(24);
+    fill: white;
+  }
+  &.back-top--visible {
+    z-index: 10;
+    opacity: 1;
+  }
+  @media (max-width: remy(767)) {
+    bottom: remy(30);
+    right: remy(8);
+  }
+}

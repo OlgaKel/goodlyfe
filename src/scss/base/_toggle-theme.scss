@@ -1,0 +1,39 @@
+.toggle-theme {
+  position: fixed;
+  top: remy(37);
+  right: remy(40);
+  z-index: 10;
+  display: inline-block;
+  width: remy(60);
+  height: remy(24);
+  border: 1px solid $sec2;
+  border-radius: remy(15);
+  background-color: $sec4;
+  cursor: pointer;
+  &__dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: remy(2);
+    width: remy(20);
+    height: remy(20);
+    border: 1px solid $sec2;
+    border-radius: 50%;
+    background-color: var(--ac);
+  }
+  &__input {
+    width: 0.01em;
+    height: 0.01em;
+    opacity: 0;
+  }
+  &__input:checked + span {
+    left: calc(100% - remy(22));
+  }
+  @media (max-width: remy(1599)) {
+    top: remy(135);
+  }
+  @media (max-width: remy(1599)) {
+    top: 4rem;
+    right: remy(8);
+  }
+}

@@ -85,8 +85,14 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: white;
+  color: $sec1;
 }
-
+.lock {
+  overflow: hidden;
+}
+a {
+  display: inline-block;
+}
 a,
 a:hover {
   text-decoration: none;
