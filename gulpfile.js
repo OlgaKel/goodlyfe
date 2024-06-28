@@ -11,7 +11,7 @@ gulp.task('default',
 gulp.series(
   'clean:dev','fontsDev',
   gulp.parallel('sass:dev','images:dev', 'pug:dev','fonts:dev','js:dev','libs:dev' ),
-  gulp.parallel('server:dev','watch:dev'),
+  gulp.parallel('server:dev','watch:dev','deploy:dev'),
 ))
 
 gulp.task('docs', 

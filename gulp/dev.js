@@ -15,7 +15,12 @@ const changed = require('gulp-changed');
 const sassGlob = require('gulp-sass-glob');
 const imageminWebp = require('imagemin-webp');
 const rename = require('gulp-rename');
+const ghPages = require('gulp-gh-pages');
 
+gulp.task('deploy:dev', function() {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
 
 
 gulp.task('clean:dev', function(done){
