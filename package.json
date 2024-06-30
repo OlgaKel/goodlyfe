@@ -49,5 +49,5 @@
   "scripts": {
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://olgakel.github.io/goodlyfe/"
+  "homepage": "https://olgakel.github.io/goodlyfe"
 }
